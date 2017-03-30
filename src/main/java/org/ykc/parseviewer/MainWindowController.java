@@ -71,37 +71,40 @@ public class MainWindowController implements Initializable{
                     TreeTableRow<DetailsRow> ttr = getTreeTableRow();
                     DetailsRow x = ttr.getItem();
                     DetailsRow.BG bg = BG.NORMAL;
+                    String style = "";
                     if(x != null){
-                    	bg = x.getBcolor(); 
+                    	bg = x.getBcolor();
+                    	style += x.getBold() ? "-fx-font-weight:bold;-fx-font-style:italic;":"";
                     }
                     
                     switch(bg){
                     case RED:
-                    	setStyle("-fx-background-color:red;"
-                    			+ "-fx-text-fill:white;");
+                    	style += "-fx-background-color:red;"
+                    			+ "-fx-text-fill:white;";
                     	break;
                     case GREEN:
-                    	setStyle("-fx-background-color:green;"
-                    			+ "-fx-text-fill:white;");
+                    	style += "-fx-background-color:green;"
+                    			+ "-fx-text-fill:white;";
                     	break;
                     case BLUE:
-                    	setStyle("-fx-background-color:blue;"
-                    			+ "-fx-text-fill:white;");
+                    	style += "-fx-background-color:blue;"
+                    			+ "-fx-text-fill:white;";
                     	break;
                     case YELLOW:
-                    	setStyle("-fx-background-color:yellow;"
-                    			+ "-fx-text-fill:black;");
+                    	style += "-fx-background-color:yellow;"
+                    			+ "-fx-text-fill:black;";
                     	break;
                     case PINK:
-                    	setStyle("-fx-background-color:pink;"
-                    			+ "-fx-text-fill:black;");
+                    	style += "-fx-background-color:pink;"
+                    			+ "-fx-text-fill:black;";
                     	break;                     	
                     default:
-                    	setStyle("-fx-text-fill:black;" 
+                    	style += "-fx-text-fill:black;" 
                     			+ "-fx-highlight-fill:dodgerblue;"
-                    			+ "-fx-highlight-text-fill:white");
+                    			+ "-fx-highlight-text-fill:white";
                         break;
                     }
+                    setStyle(style);
                 }
             };
             return cell;
@@ -149,6 +152,7 @@ public class MainWindowController implements Initializable{
 				.value("1")
 				.level(0)
 				.bcolor(BG.NORMAL)
+				.bold(true)
 				.build());
 		xFields.add(new DetailsRow.Builder()
 				.name("Beef")

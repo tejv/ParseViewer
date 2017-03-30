@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ykc.parseviewer.MainWindowController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ykc.parseviewer.MainWindowController">
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -25,7 +25,7 @@
                         </ToolBar>
                      </children>
                   </VBox>
-                  <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="44.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0">
+                  <ScrollPane fitToHeight="true" fitToWidth="true" layoutY="44.0" prefHeight="594.0" prefWidth="985.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="44.0">
                      <content>
                         <TreeTableView fx:id="ttViewParseViewer" prefHeight="542.0" prefWidth="985.0" showRoot="false" tableMenuButtonVisible="true">
                            <columns>
